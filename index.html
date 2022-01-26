@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>JS Event Function</title>
+	<title>local storage toDoList</title>
 	<!-- CSS File attachment -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -16,15 +16,14 @@
 
 </head>
 <body>
-	<div class="container">
-		<!-- function is a set of statement used to performed a task 
-			we can declare function with the keywoard of function
-			arguments are written in parenthesis brackets
-			we can write 244 arguments in funcitons
-			the importance of return statement used to stop the program
-			Js events, HTML events are "things" that happen to HTML elements.
-			some events are onclick, onmouseout, onmouseover,onkeydown etc-->
-		<button class="btn btn-primary mt-4" onmouseout="originalcolor()" onmouseover="blackcolor()">Hover It</button>
+	<div class="container mt-4">
+		<form action="" class="d-flex gap-2">
+			<input type="text" placeholder="Enter List Item" id="inputtext" class="w-25 form-control">
+			<button onclick="submitFunc()" class="btn btn-primary" type="button">Submit</button>
+		</form>
+		<ul id="itemList">
+
+		</ul>
 	</div>
 
 	<!-- jquery attachment -->
