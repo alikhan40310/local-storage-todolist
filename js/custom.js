@@ -19,12 +19,12 @@ function submitFunc(){
         newArray = JSON.parse(todos);
     }
     // get item from localStorage
-    let x = JSON.parse(localStorage.getItem("listStorage"));
+    // let x = JSON.parse(localStorage.getItem("listStorage"));
 
     for(let i=0; i<newArray.length;i++){
 
         let valueList = document.createElement("li");
-        valueList.innerHTML = x[i];
+        valueList.innerHTML = newArray[i];
         document.getElementById("itemList").appendChild(valueList);
 
     }
