@@ -9,21 +9,27 @@ function submitFunc(){
     document.getElementById("inputtext").value = "";
     
     newArray.push(inValue);
-
+    
     localStorage.setItem("listStorage", JSON.stringify(newArray));
 
 }
+    // for update data
+    const todos = localStorage.getItem("listStorage");
+    if(todos !== null){
+        newArray = JSON.parse(todos);
+    }
     // get item from localStorage
     let x = JSON.parse(localStorage.getItem("listStorage"));
 
-    for(let i=0; i<x.length;i++){
+    for(let i=0; i<newArray.length;i++){
+
         let valueList = document.createElement("li");
         valueList.innerHTML = x[i];
         document.getElementById("itemList").appendChild(valueList);
 
     }
 
-
+    
 
 
 // //storing array in local storage
