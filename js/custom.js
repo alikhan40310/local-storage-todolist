@@ -1,6 +1,5 @@
-
+// global array
 let newArray =[];
-
 
 function submitFunc(){
     let valueList = document.createElement("li");
