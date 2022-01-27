@@ -1,18 +1,34 @@
 
+let newArray =[];
+
+
 function submitFunc(){
-   
     let valueList = document.createElement("li");
     let inValue = document.getElementById("inputtext").value;
-    valueList.innerHTML = inValue;
+    valueList.innerHTML = inValue; 
     document.getElementById("itemList").appendChild(valueList); 
     document.getElementById("inputtext").value = "";
+    
+    newArray.push(inValue);
 
-        localStorage.setItem("listinStorage", inValue);
-        localStorage.getItem("listinStorage");
+    localStorage.setItem("listStorage", JSON.stringify(newArray));
 
 }
+    // get item from localStorage
+    let x = JSON.parse(localStorage.getItem("listStorage"));
 
-// storing array in local storage
+    for(let i=0; i<x.length;i++){
+        let valueList = document.createElement("li");
+        valueList.innerHTML = x[i];
+        document.getElementById("itemList").appendChild(valueList);
+
+    }
+
+
+
+
+// //storing array in local storage
 // let array = [2,4,5,6,7];
-// localStorage.setItem("myArray", array);
+// let name = ['ali', 'ahmed', 'nouman']
+// localStorage.setItem("myArray", name);
 // document.getElementById("demo").innerHTML = localStorage.getItem("myArray");
